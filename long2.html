@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		How to get the longest string
+		in an array using JavaScript ?
+	</title>
+	
+	<style>
+		body {
+			text-align: center;
+		}
+		h1 {
+			color: green;
+		}
+		#geeks{
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>GeeksforGeeks</h1>
+	
+	<p>
+		Click on the button to get the
+		longest string in the array.<br>
+		<b>Array = [
+			"A_Copmuter_Science_Portal",
+			"GeeksforGeeks",
+			"GFG",
+			"geeks"
+			]
+		</b>
+	</p>
+	
+	<button onclick="gfg_Run()">
+		Click Here
+	</button>
+	
+	<p id="geeks"></p>
+	
+	<script>
+		var el_down = document.getElementById("geeks");
+		
+		var arr = [
+			"A_Copmuter_Science_Portal",
+			"GeeksforGeeks",
+			"GFG",
+			"geeks"
+		];
+		
+		// It compares the length of a element with
+		// every other element and return it if its
+		// greater than every other element.
+		function gfg_Run() {
+				el_down.innerHTML = "'" +
+				arr.reduce(function (a, b) {
+					return a.length > b.length ? a : b;
+				}) + "' is the longest string"
+					+ " in the array.";
+			}
+	</script>
+</body>
+
+</html>
